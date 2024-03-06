@@ -1,0 +1,502 @@
+﻿ /* the current version 3.2.3 */
+:root {
+    --blue: #00639E;
+    --green: #17BEBB;
+}
+
+@keyframes fadeInChat {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        right: 0%;
+    }
+
+    to {
+        right: 30%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        right: 30%;
+    }
+
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes fadeinBox {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutBox {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+::placeholder {
+    color: #AFAEAE;
+}
+
+.zenzioFadeBox-in-animation {
+    animation: fadeinBox 0.5s forwards;
+    animation-direction: normal;
+}
+
+.zenzioFadeBox-out-animation {
+    animation: fadeOutBox 0.3s forwards;
+    animation-direction: normal;
+}
+
+.zenzioFadeIcon-in-animation {
+    animation: fadeIn 1s forwards;
+    animation-direction: normal;
+}
+
+.zenzioFadeIcon-out-animation {
+    animation: fadeOut 1s forwards;
+    animation-direction: normal;
+}
+
+.zenzioBottomContainer {
+    position: relative;
+    margin: 0;
+    padding-top: 0;
+    background-color: #fff;
+    z-index: 9998;
+}
+
+.zenzioBottomText {
+    font-size: 8px;
+    text-align: center;
+    color: #9c9c9c;
+    background-color: #fff;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+    .zenzioBottomText a {
+        color: #9c9c9c;
+    }
+
+/*.container {
+    max-width: 1828px;
+    margin: 0 auto;
+    padding: 0 35px;
+    font-family: 'Noto Sans';
+    font-size: 16px;
+    line-height: 28px;
+    color: #2C2C2C;
+    background-repeat: no-repeat;
+    height: 5350px;
+}*/
+
+.zenzioChatIconClass {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+    .zenzioChatIconClass:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    .zenzioChatIconClass span.img {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+.zenzioClose {
+    position: absolute; /* Position the button absolutely */
+    justify-content: right;
+    right: 16px;
+    font-size: larger;
+    font-stretch: ultra-expanded;
+    top: 4px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    z-index: 9999;
+}
+
+#zenzioChatSendButton {
+    position: absolute;
+    right: 16px;
+    background-image: url(../img/Designer_demo/send.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: 0.5s ease;
+}
+
+.zenzioChatWindow {
+    position: fixed;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 20px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 20%;
+    right: 0;
+    z-index: 9998;
+    transition: transform 0.5s ease;
+    bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    .zenzioChatWindow {
+        width: 75%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .zenzioChatWindow {
+        width: 50%;
+    }
+}
+
+.zenzioWindowExpanderContainer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 6px;
+    padding-bottom: 4px;
+    padding-top: 10px;
+    background: #fff !important;
+    z-index: 9999;
+    display: flex;
+    align-content: center;
+    margin-right: 8px;
+}
+
+
+.zenzioWindowExpander {
+    width: 100%; /* Adjust width as needed */
+    height: 8px;
+    align-content: center;
+    position: relative;
+    margin-bottom: 4px;
+    background-color: #111;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+    .zenzioWindowExpander:hover {
+        background-color: #333; /* Change to your desired hover color */
+    }
+
+    /* Change background color on click (active state) */
+    .zenzioWindowExpander:active {
+        background-color: #555; /* Change to your desired active color */
+    }
+
+.zenzioChatWindowHidden {
+    display: none;
+}
+
+.zenzioCloseDark {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000000;
+}
+
+.zenzioChatHeaderContainerClass {
+    /*    width: 100%;*/
+    height: auto;
+    background-color: #111;
+    color: white;
+    padding: 8px 16px 8px 16px;
+}
+
+.zenzioRightAlignedDiv {
+    text-align: right;
+}
+
+.zenzioChatCloseLabel {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#zenzioChatBox {
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    width: 100%;
+    z-index: 9998;
+    height: calc(100vh);
+    overflow-wrap: normal;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999999 #F5F5F5;
+    margin-right: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+    #zenzioChatBox::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #zenzioChatBox::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+    }
+
+    #zenzioChatBox::-webkit-scrollbar-thumb {
+        background-color: #999999;
+        border-radius: 10px;
+    }
+
+.zenzioMessage-chat-bubble {
+    background-color: #f8f8f8;
+    text-align: left;
+    -moz-border-radius-bottomleft: 2px;
+    border-bottom-left-radius: 2px;
+    position: relative;
+    margin-left: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.zenzioChatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+    .zenzioChatButton:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+    .zenzioChatButton:hover:after {
+        opacity: 1;
+    }
+
+
+.zenzioDate {
+    font-size: 12px;
+    color: #9c9c9c;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    margin-bottom: 12px;
+    animation: fadeInChat 2s forwards;
+}
+
+.zenzioMessage-chat-bubble:after {
+    content: '';
+    background-size: contain;
+    display: block;
+    height: 32px;
+    position: absolute;
+    left: 10px;
+    margin-top: 18px;
+}
+
+.zenzioMessage-user-bubble {
+    align-self: flex-end;
+    position: relative;
+    display: inline !important;
+    background-color: #111 !important;
+    border-bottom-right-radius: 2px !important;
+    color: white !important;
+    align-self: flex-end;
+    margin-right: 16px;
+    margin-left: auto;
+}
+
+.zenzioMessage-chat-bubble, .zenzioMessage-user-bubble {
+    background-color: #f2f2f2;
+    padding: 12px 16px;
+    border-radius: 20px;
+    margin-bottom: 8%;
+    animation: fadeInChat 0.5s forwards;
+    word-wrap: break-word;
+    max-width: 62%;
+    color: black;
+    display: inline-block;
+    box-sizing: border-box;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.zenzioChatInputContainer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    background: #fff !important;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    box-shadow: 0 0 50px 0 #fff;
+}
+
+#zenzioChatInput {
+    flex: 1;
+    padding: 8px 45px 12px 24px;
+    border-radius: 50px;
+    border: 1px solid #AFAEAE;
+    font-size: 14px;
+    font-weight: 400;
+    color: #111111;
+    width: calc(100% -10px);
+    overflow: hidden;
+    outline: none;
+    vertical-align: middle;
+    resize: none;
+    transition: border-radius 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.zenzioTextCue {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999999;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: none;
+    max-width: 200px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.zenzioTextCueInner {
+    margin-left: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.zenzioTyping {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    min-height: 10px;
+}
+
+    .zenzioTyping .zenzioDot {
+        animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+        background-color: rgba(20,105,69,0.0);
+        border-radius: 50%;
+        height: 7px;
+        margin-right: 4px;
+        vertical-align: middle;
+        width: 7px;
+        flex-wrap: wrap;
+    }
+
+        .zenzioTyping .zenzioDot:nth-child(1) {
+            animation-delay: 200ms;
+        }
+
+        .zenzioTyping .zenzioDot:nth-child(2) {
+            animation-delay: 300ms;
+        }
+
+        .zenzioTyping .zenzioDot:nth-child(3) {
+            animation-delay: 400ms;
+        }
+
+        .zenzioTyping .zenzioDot:last-child {
+            margin-right: 0;
+        }
+
+@keyframes mercuryTypingAnimation {
+    0% {
+        transform: translateY(0px);
+        background-color: #86A3B8;
+    }
+
+    28% {
+        transform: translateY(-7px);
+        background-color: #F48484;
+    }
+
+    44% {
+        transform: translateY(0px);
+        background-color: #F55050;
+    }
+}
