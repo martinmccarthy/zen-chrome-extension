@@ -14,7 +14,7 @@ Follow these steps to install the Zenzio Client Demonstration Tool extension man
 2. Click on the `Code` button, then select `Download ZIP`.
 3. Once the download is complete, extract the ZIP file to a folder on your computer. Remember the extraction location, as you will need it in the next steps.
 
-![<img src="images/extensiondownloadlocation.png">](https://github.com/martinmccarthy/zen-chrome-extension/tree/master/images/extensiondownloadlocation.png?raw=true)
+[<img src="images/extensiondownloadlocation.png">](https://github.com/martinmccarthy/zen-chrome-extension/tree/master/images/extensiondownloadlocation.png?raw=true)
 
 ### Step 2: Install the Extension in Chrome
 
@@ -24,13 +24,13 @@ Follow these steps to install the Zenzio Client Demonstration Tool extension man
 4. Navigate to the folder where you extracted the ZIP file.
 5. Select the folder and click `Open`. The Zenzio Client Demonstration Tool extension should now be installed.
 
-![<img src="images/zenunpackinstructions.png">](https://github.com/martinmccarthy/zen-chrome-extension/tree/master/images/zenunpackinstructions.png?raw=true)
+[<img src="images/zenunpackinstructions.png">](https://github.com/martinmccarthy/zen-chrome-extension/tree/master/images/zenunpackinstructions.png?raw=true)
 
 ### Step 3: Access and Pin Extension
 1. Now you should be able to access the extension, you can do so by clicking the puzzle on the top right of the chrome browser
 2. It is recommended to pin this extension to your browser for easy access, this can be done by hitting the pushpin button.
 
-![<img src="images/pininstructions.png">](https://github.com/martinmccarthy/zen-chrome-extension/tree/master/images/pininstructions.png?raw=true)
+[<img src="images/pininstructions.png">](https://github.com/martinmccarthy/zen-chrome-extension/tree/master/images/pininstructions.png?raw=true)
 
 ## Troubleshooting
 
