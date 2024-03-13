@@ -42,4 +42,4 @@ If you encounter any issues during the installation or usage of the Zenzio Clien
 
 ## Support
 
-For further assistance, please contact me for support at `[mmccarthy@zenzio.com]`.
+For further assistance, please contact me for support at `mmccarthy@zenzio.com`.
