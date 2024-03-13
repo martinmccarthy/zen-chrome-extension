@@ -4,6 +4,7 @@
     "version": "1.0",
     "description": "Browser extension for live demonstrating chat on company websites",
     "permissions": [
+      "storage",
       "activeTab",
       "tabs",
       "https://ai.zenzio.com/*",
@@ -13,6 +14,13 @@
       "scripts": ["background.js"],
       "persistent": false
     },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ],    
     "browser_action": {
       "default_popup": "popup.html",
       "default_icon": {
