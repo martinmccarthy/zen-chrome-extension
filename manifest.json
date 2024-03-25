@@ -8,7 +8,8 @@
       "activeTab",
       "tabs",
       "https://ai.zenzio.com/*",
-      "<all_urls>"
+      "<all_urls>",
+      "webNavigation"
     ],
     "background": {
       "scripts": ["background.js"],

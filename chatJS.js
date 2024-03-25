@@ -707,7 +707,7 @@ var Zenzio = (function () {
         var vinQueryString = `vinNumbers=${encodeURIComponent(Array.from(uniqueVins).join(','))}`;
 
         chatid = await localStorage.getItem('ChatID');
-        const url = `https://localhost:7077/api/VinInteraction?locationid=${locationid}&chatid=${chatid}&${vinQueryString}`;
+        const url = `https://ai.zenzio.com/api/VinInteraction?locationid=${locationid}&chatid=${chatid}&${vinQueryString}`;
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -741,7 +741,7 @@ var Zenzio = (function () {
     //********************************** */
     async function checkInventory() {
         var vinQueryString = `vinNumbers=${encodeURIComponent(Array.from(uniqueVins).join(','))}`;
-        const url = `https://localhost:7077/api/inventory?locationId=${locationid}&${vinQueryString}`;
+        const url = `https://ai.zenzio.com/api/inventory?locationId=${locationid}&${vinQueryString}`;
         try {
             const response = await fetch(url, {
                 method: 'GET',
@@ -921,7 +921,7 @@ var Zenzio = (function () {
     async function UserRequest(chatid, locationid, messageid, Message, LastmessageTime) {
         while (true) {
             try {
-                var url = `https://localhost:7077/OutBound/UserRequest?chatid=${chatid}&locationid=${locationid}&messageid=${messageid}&'&message=${encodeURIComponent(Message)}&messagetime=${LastmessageTime}`
+                var url = `https://ai.zenzio.com/OutBound/UserRequest?chatid=${chatid}&locationid=${locationid}&messageid=${messageid}&'&message=${encodeURIComponent(Message)}&messagetime=${LastmessageTime}`
                 if (uniqueVins.size > 0) url += `&vinNumbers=${encodeURIComponent(Array.from(uniqueVins).join(','))}`
 
                 const headers = new Headers();
@@ -977,7 +977,7 @@ var Zenzio = (function () {
         try {
             const ChatID = await localStorage.getItem('ChatID');
 
-            url = 'https://localhost:7077/OutBound/LoadChat?chatid=' + ChatID + '&locationid=' + locationid;
+            url = 'https://ai.zenzio.com/OutBound/LoadChat?chatid=' + ChatID + '&locationid=' + locationid;
             const headers = new Headers();
             headers.append('X-Zenzio-Current-URL', window.location.href);
             headers.append('X-Zenzio-Current-IP', currUserIp);

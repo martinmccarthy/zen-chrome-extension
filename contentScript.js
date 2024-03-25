@@ -70,8 +70,8 @@ if (!window.myExtensionContentScriptInjected) {
     async function loadZenzio() {
         console.log('Loading Zenzio AI...')
         const API = await window.DDC.APILoader.create();
-        await API.loadCSS('https://localhost:7077/api/ZenAsset/dlrcom/css');
-        await API.loadJS('https://localhost:7077/api/ZenAsset/dlrcom/js').then(() => {
+        await API.loadCSS('https://ai.zenzio.com/api/ZenAsset/dlrcom/css');
+        await API.loadJS('https://ai.zenzio.com/api/ZenAsset/dlrcom/js').then(() => {
             callZenzioScript();
             hasInjected = true;
             console.log('Zenzio AI Loaded...');
